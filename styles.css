@@ -797,25 +797,25 @@ h3{
         font-size: 9vw;
     }
 
-    .creations-menu-title{
-        font-size: 7vw;
-    }
-}
-
-@media(max-width: 400px){
-    #container{
-        grid-template-rows: 60vh 1fr 2000px 630px;
-    }
-
-    #header{
-        background-size: cover;
-    }
-
     #header-logo > img{
         width: 40vw;
     }
 
     #hamburger > img{
         width: 20px;
+    }
+
+    .creations-menu-title{
+        font-size: 7vw;
+    }
+}
+
+@media(max-width: 375px){
+    #container{
+        grid-template-rows: 60vh 1fr 2000px 630px;
+    }
+
+    #header{
+        background-size: cover;
     }
 }
