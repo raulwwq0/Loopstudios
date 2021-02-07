@@ -28,6 +28,7 @@
     "description"
     "creations"
     "footer";
+    grid-template-columns: 1fr;
     grid-template-rows: 90vh 1fr auto 120px;
     grid-row-gap: 200px;
 }
@@ -79,6 +80,7 @@ h3{
     background-position: center center;
     background-size: cover;
     position: relative;
+    width: 100%;
     color: hsl(0, 0%, 100%);
 }
 
@@ -298,7 +300,8 @@ h3{
     text-transform: uppercase;
     font-size: 30px;
     width: 45%;
-    position: relative;
+    position: absolute;
+    bottom: 0px;
     margin-bottom: 30px;
     padding-left: 30px;
 }
@@ -584,6 +587,8 @@ h3{
 }
 
 @media(max-width: 700px){
+    
+
     #hamburger{
         display: block;
         position: relative;
@@ -598,10 +603,11 @@ h3{
     #hamburger > img{
         width: 45px;
         margin-bottom: 4px;
+        margin-right: 7vw;
     }
 
     #container{
-        grid-template-rows: 100vh 1fr auto 120px;
+        grid-template-rows: 70vh 1fr 2000px 630px;
     }
 
     h3 {
@@ -612,14 +618,23 @@ h3{
         background-image: url('images/mobile/image-hero.jpg');
     }
 
+    #header::before{
+        background-color: transparent;
+
+    }
+
     #header-content{
-        width: 90%;
-        grid-template-columns: 200px auto 70px;
+        width: 100%;
+        grid-template-areas: 
+        "logo main-menu"
+        "slogan slogan";
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 13% auto;
     }
 
     #header-logo > img {
         width: 300px;
+        margin-left: 7vw;
     }
 
     #header .menu{
@@ -636,7 +651,7 @@ h3{
     #header .menu ul{
         display: block;
         position: absolute;
-        bottom: 450px;
+        top: 20%;
         left: 50px;  
     }
 
@@ -653,16 +668,13 @@ h3{
         font-size: 40px;
     }
 
-    #hamburger .btn-close{
-        display: block;
-        position: sticky;
-        z-index: 2;
-    }
-
     #slogan h2{
-        width: 86%;
-        font-size: 80px;
-
+        width: auto;
+        font-size: 10vw;
+        margin-left: 7vw;
+        margin-right: 7vw;
+        padding-right: 8vw;
+        padding-left: 8vw;
     }
 
     #description-text p {
@@ -682,7 +694,7 @@ h3{
 
     #creations-menu{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 200px);
+        grid-template-rows: repeat(8, 1fr);
     }
 
     .creations-menu-options{
@@ -777,5 +789,33 @@ h3{
 
     #copyright {
        text-align: center;
+    }
+}
+
+@media(max-width: 570px){
+    h3{
+        font-size: 9vw;
+    }
+
+    .creations-menu-title{
+        font-size: 7vw;
+    }
+}
+
+@media(max-width: 375px){
+    #container{
+        grid-template-rows: 60vh 1fr 2000px 630px;
+    }
+
+    #header{
+        background-size: cover;
+    }
+
+    #header-logo > img{
+        width: 40vw;
+    }
+
+    #hamburger > img{
+        width: 20px;
     }
 }
