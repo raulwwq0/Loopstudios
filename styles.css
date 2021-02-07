@@ -802,7 +802,7 @@ h3{
     }
 }
 
-@media(max-width: 375px){
+@media(max-width: 400px){
     #container{
         grid-template-rows: 60vh 1fr 2000px 630px;
     }
