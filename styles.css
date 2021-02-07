@@ -228,7 +228,7 @@ h3{
 }
 
 .creations-menu-options{
-    min-height: 700px;
+    min-height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -375,7 +375,7 @@ h3{
     }
 
     #container{
-        grid-template-rows: 43vh 1fr auto 120px;
+        grid-template-rows: 70vh 1fr auto 120px;
     }
 
     #header{
